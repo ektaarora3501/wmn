@@ -1,0 +1,147 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+
+<html>
+<head>
+  <title>Welcome</title>
+<style type="text/css">
+h2{
+  font-size: 30px;
+  text-shadow: 0.5;
+  color: #64b5f6;
+}
+.image
+{
+  width: 268px;
+  height: 188px;
+}
+  nav ul {
+  text-align: right;
+  position: fixed;
+  width: 100%;
+  background-color: #a7ffeb;
+}
+nav ul li {
+  display: inline-block;
+  margin: 30px;
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+nav ul li a {
+  color: #008080;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #9c27b0;
+}
+.intro {
+  top: 0;
+  background: #5CB3FF;
+  min-height: 20vh;
+  padding-top: 10vh
+}
+#rect {
+  animation-name: rainbow;
+  /*animation-duration:5s;*/
+  animation-iteration-count: infinite;
+}
+@keyframes rainbow {
+  0% {
+    background-color: #51079b;
+    top: 0px;
+    left: 0px;
+  }
+  50% {
+    background-color: #03a9f4;
+    top: 0px;
+    left: 25px;
+
+  }
+  100% {
+    background-color: #81d4fa;
+    top: 0px;
+    left:-25px;
+  }
+}
+.content
+{
+  background-color: #ADDFFF;
+  font-size: 20px;
+  height: 150px;
+  width:100%;
+}
+</style>
+
+
+
+</head>
+
+
+
+<body>
+<nav>
+
+
+  <ul id='navbar'>
+
+    <li><a href="">Home</a></li>
+    <li><a href="">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="http://127.0.0.1:5000/register">Sign In/Sign Up</a></li>
+  </ul>
+</nav>
+<div id="home" class="intro">
+<marquee direction="left" scrollamount="15">
+
+<h1>Welcome to medicine reminder</h1>
+</marquee>
+</div>
+
+<div class="content" align="left" id="rect" >
+<!--   <div align="left"> -->
+
+  <marquee direction="left" scrollamount="15">
+
+  <p>Now never miss a single dose of your medicines</p>
+  <p>We will remind you to take medicines on time </p>
+  <p>by either calling you or texting you</p>
+</marquee>
+</div>
+
+
+</div>
+
+<br><br>
+<div id="#about" align="center">
+  <h1  >About</h1>
+  <h2>Now take your medicines on time with MedRem</h2>
+  <p>Just follow some simple steps</p>
+  <p> 1. Register on MedRem by entering your details.</p>
+  <p> 2. Enter the medicine name and time to take it.</p>
+  <p> 3. We will remind you when to take which medicine.</p>
+
+</div>
+
+
+
+<br>
+<div align="center" id="#contact">
+ <h2 align="center">Contact</h2>
+
+
+  <a  align="center" href="janvit397@gmail.com">Mail us</a>
+  <br>
+  <a align="center" href="tel:8827247707">Call us</a>
+
+
+
+
+
+</div>
+<br>
+<br>
+
+<footer align="center" >Made with <i class="fa fa-heart red" color="red"></i> by Codemaniac</footer>
+</body>
+</html>

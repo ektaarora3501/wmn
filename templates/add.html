@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+      Add medicines
+    </title>
+
+<style>
+
+table{
+  margin-left: 40%;
+}
+
+.header{
+background-color:#0097a7;
+height:50px;
+text-align: center;
+font-size:40px;
+color:white;
+
+}
+
+.invalid-feedback{
+  border-color:#ff3346;
+  color:#ff3346;
+ }
+
+.invalid{
+ border-color:#ff3346;
+}
+
+</style>
+
+
+</head>
+<body>
+  <div class="header">
+    MedRem..
+  </div>
+
+  {% if error %}
+            <div class='error'>
+           <div class="alert alert-danger">
+           <p ><strong>Error:</strong> {{ error }}
+           </div>
+
+           </div>
+        {% endif %}
+
+  <form action="" method="POST">
+  {{form.hidden_tag()}}
+
+    <table >
+    <br><br>
+       <tr>
+         <td >
+  	<font>
+           {{ form.username.label(class_="form-control-label")}}
+              {% if form.username.errors %}
+                {{ form.username(class="invalid" )}}
+                  <div class="invalid-feedback">
+                  {% for errors in form.username.errors %}
+                  <span>{{ errors }}</span>
+                  {% endfor %}
+              </div>
+  	</font>
+                  </td>
+                  </tr>
+                  <td>
+
+                {% else %}
+                  <div class="true-feedback">
+              {{ form.username(class="valid")}}
+              {% endif %}
+              </div>
+         </td>
+     </tr>
+   <tr>
+         <td>
+  	<font>
+           {{ form.medicine.label(class_="form-control-label")}}
+             <br>
+              {% if form.medicine.errors %}
+                {{ form.med(class="invalid" )}}
+                  <div class="invalid-feedback">
+                  {% for errors in form.med.errors %}
+                  <span>{{ errors }}</span>
+                  {% endfor %}
+                </div>
+  	</font>
+                  </td>
+                  </tr>
+                  <td>
+
+                {% else %}
+                  <div class="true-feedback">
+              {{ form.medicine(class="valid")}}
+              {% endif %}
+              </div>
+         </td>
+     </tr>
+     <tr>
+         <td>
+  	<font>
+           {{ form.time.label(class_="form-control-label")}}
+             <br>
+              {% if form.time.errors %}
+                {{ form.time(class="invalid" )}}
+                  <div class="invalid-feedback">
+                  {% for errors in form.time.errors %}
+                  <span>{{ errors }}</span>
+                  {% endfor %}
+          </div>
+  	</font>
+                  </td>
+                  </tr>
+                  <td>
+
+                {% else %}
+                  <div class="true-feedback">
+              {{ form.time(class="valid")}}
+              {% endif %}
+              </div>
+         </td>
+     </tr>
+
+
+
+
+     <tr>
+         <td>
+     <font>
+           {{ form.exp_date.label(class_="form-control-label")}}
+             <br>
+              {% if form.exp_date.errors %}
+                {{ form.exp_date(class="invalid" )}}
+                  <div class="invalid-feedback">
+                  {% for errors in form.exp_date.errors %}
+                  <span>{{ errors }}</span>
+                  {% endfor %}
+          </div>
+     </font>
+                  </td>
+                  </tr>
+                  <td>
+
+                {% else %}
+                  <div class="true-feedback">
+              {{ form.exp_date(class="valid")}}
+              {% endif %}
+              </div>
+         </td>
+     </tr>
+
+
+
+
+
+
+  <tr>
+     <td>
+       {{form.submit}}
+      </div>
+     </td>
+  </tr>
+   </table>
+  </form>
+
+  </body>
+  </html>

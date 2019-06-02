@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+      update medicines
+    </title>
+
+<style>
+
+table{
+  margin-left: 40%;
+}
+
+.header{
+background-color:#0097a7;
+height:50px;
+text-align: center;
+font-size:40px;
+color:white;
+
+}
+
+.invalid-feedback{
+  border-color:#ff3346;
+  color:#ff3346;
+ }
+
+.invalid{
+ border-color:#ff3346;
+}
+
+
+</style>
+
+
+</head>
+<body>
+  <div class="header">
+    MedRem..
+  </div>
+
+  {% if error %}
+            <div class='error'>
+           <div class="alert alert-danger">
+           <p ><strong>Error:</strong> {{ error }}
+           </div>
+
+           </div>
+        {% endif %}
+
+  <form action="" method="POST">
+  {{form.hidden_tag()}}
+
+    <table >
+    <br><br>
+       <tr>
+         <td >
+  	<font>
+           {{ form.password.label(class_="form-control-label")}}
+              {% if form.password.errors %}
+                {{ form.password(class="invalid" )}}
+                  <div class="invalid-feedback">
+                  {% for errors in form.password.errors %}
+                  <span>{{ errors }}</span>
+                  {% endfor %}
+              </div>
+  	</font>
+                  </td>
+                  </tr>
+                  <td>
+
+                {% else %}
+                  <div class="true-feedback">
+              {{ form.password(class="valid")}}
+              {% endif %}
+              </div>
+         </td>
+     </tr>
+   <tr>
+         <td>
+  	<font>
+           {{ form.phone_no.label(class_="form-control-label")}}
+             <br>
+              {% if form.phone_no.errors %}
+                {{ form.phone_no(class="invalid" )}}
+                  <div class="invalid-feedback">
+                  {% for errors in form.phone_no.errors %}
+                  <span>{{ errors }}</span>
+                  {% endfor %}
+                </div>
+  	</font>
+                  </td>
+                  </tr>
+                  <td>
+
+                {% else %}
+                  <div class="true-feedback">
+              {{ form.phone_no(class="valid")}}
+              {% endif %}
+              </div>
+         </td>
+     </tr>
+     <tr>
+         <td>
+  	<font>
+           {{ form.whatsapp.label(class_="form-control-label")}}
+             <br>
+              {% if form.whatsapp.errors %}
+                {{ form.whatsapp(class="invalid" )}}
+                  <div class="invalid-feedback">
+                  {% for errors in form.whatsapp.errors %}
+                  <span>{{ errors }}</span>
+                  {% endfor %}
+          </div>
+  	</font>
+                  </td>
+                  </tr>
+                  <td>
+
+                {% else %}
+                  <div class="true-feedback">
+              {{ form.whatsapp(class="valid")}}
+              {% endif %}
+              </div>
+         </td>
+     </tr>
+
+
+
+
+
+
+  <tr>
+     <td>
+       {{form.submit}}
+      </div>
+     </td>
+  </tr>
+  <br><br>
+  <tr>
+    <td>
+    </td><td></td>
+    <td>
+  <a href="http://127.0.0.1:5000/delet/{{username}}"> Delete Account </a>
+</td>
+</tr>
+</table>
+  </form>
+
+  </body>
+  </html>

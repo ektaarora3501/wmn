@@ -1,0 +1,315 @@
+
+<html>
+<head>
+<title>
+Sign up page
+</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+
+<style type="text/css">
+
+ 	 nav ul {
+   text-align: right;
+
+   width: 100%;
+   background-color: #a7ffeb;
+ }
+ nav ul li {
+   display: inline-block;
+   margin: 10px;
+   margin-bottom: 20px;
+   margin-top: 10px;
+   font-size:20px;
+ }
+ nav ul li a {
+   color: #008080;
+   text-decoration: none;
+ }
+ nav ul li a:hover {
+   color: #9c27b0;
+ }
+
+ .container
+  {
+ 	   font-size: 25px;
+ 	   text-align:center;
+     top: 0;
+
+     min-height: 20vh;
+    padding-top: 10vh
+ }
+
+.regis{
+
+    margin-left:40%;
+    margin-right: 40%;
+
+}
+
+table{
+     margin-bottom: 3%;
+     margin-right: 10%;
+     margin-left: 40%;
+     background-color:white;
+
+ }
+
+.invalid-feedback{
+  border-color:#ff3346;
+  color:#ff3346;
+ }
+
+.invalid{
+ border-color:#ff3346;
+}
+
+
+.header{
+  background-color:#0097a7;
+  height:50px;
+  text-align: center;
+  font-size:40px;
+  color:white;
+}
+
+
+
+
+
+</style>
+</head>
+<div class="header">
+  MedRem..
+</div>
+    <div>
+    	<nav>
+        <ul id='navbar'>
+
+          <li><a href="http://127.0.0.1:5000">Home</a></li>
+          <li><a href="http://127.0.0.1:5000">About</a></li>
+          <li><a href="http://127.0.0.1:5000">Contact</a></li>
+          <li><a href="http://127.0.0.1:5000/register">Sign In/Sign Up</a></li>
+        </ul>
+      </nav>
+      </div>
+
+<div class="regis">
+  <br>
+      {% if error %}
+
+                <div class='error'>
+               <div class="alert alert-danger">
+               <p ><strong>Error:</strong> {{ error }}
+               </div>
+               </div>
+            {% endif %}
+</div>
+
+
+<form action="" method="POST">
+{{form.hidden_tag()}}
+  <table>
+
+  <tr>
+      <td>
+  <font style="color:#01579b">
+        {{ form.fullname.label(class_="form-control-label")}}
+          <br>
+           {%  if form.fullname.errors %}
+             {{ form.fullname(class="invalid" )}}
+               <div class="invalid-feedback">
+               {% for errors in form.fullname.errors %}
+               <span>{{ errors }}</span>
+               {% endfor %}
+        </div>
+  </font>
+               </td>
+
+               <td>
+
+             {% else %}
+               <div class="true-feedback">
+           {{ form.fullname(class="valid")}}
+           {% endif %}
+           </div>
+      </td>
+  </tr>
+
+
+
+
+
+     <tr>
+       <td >
+	<font style="color:#01579b">
+         {{ form.username.label(class_="form-control-label")}}
+            {% if form.username.errors %}
+              {{ form.username(class="invalid" )}}
+                <div class="invalid-feedback">
+                {% for errors in form.username.errors %}
+                <span>{{ errors }}</span>
+                {% endfor %}
+            </div>
+	</font>
+</td>
+<td>
+
+              {% else %}
+              <div class="true-feedback">
+            {{ form.username(class="valid")}}
+            {% endif %}
+            </div>
+       </td>
+   </tr>
+ <tr>
+       <td>
+	<font style="color:#01579b">
+         {{ form.password.label(class_="form-control-label")}}
+
+            {% if form.password.errors %}
+              {{ form.password(class="invalid" )}}
+                <div class="invalid-feedback">
+                {% for errors in form.password.errors %}
+                <span>{{ errors }}</span>
+                {% endfor %}
+              </div>
+	</font>
+                </td>
+                <td>
+
+              {% else %}
+                <div class="true-feedback">
+            {{ form.password(class="valid")}}
+            {% endif %}
+            </div>
+       </td>
+   </tr>
+   <tr>
+       <td>
+	<font style="color:#01579b">
+         {{ form.cnf_pass.label(class_="form-control-label")}}
+
+            {% if form.cnf_pass.errors %}
+              {{ form.cnf_pass(class="invalid" )}}
+                <div class="invalid-feedback">
+                {% for errors in form.cnf_pass.errors %}
+                <span>{{ errors }}</span>
+                {% endfor %}
+        </div>
+	</font>
+                </td>
+
+                <td>
+
+              {% else %}
+                <div class="true-feedback">
+            {{ form.cnf_pass(class="valid")}}
+            {% endif %}
+            </div>
+       </td>
+   </tr>
+   <tr>
+       <td>
+	<font style="color:#01579b">
+         {{ form.email.label(class_="form-control-label")}}
+           <br>
+            {% if form.email.errors %}
+              {{ form.email(class="invalid" )}}
+                <div class="invalid-feedback">
+                {% for errors in form.email.errors %}
+                <span>{{ errors }}</span>
+                {% endfor %}
+         </div>
+	</font>
+                </td>
+
+                <td>
+
+              {% else %}
+                <div class="true-feedback">
+            {{ form.email(class="valid")}}
+            {% endif %}
+            </div>
+       </td>
+   </tr>
+
+   <tr>
+       <td>
+ <font style="color:#01579b">
+         {{ form.phone_no.label(class_="form-control-label")}}
+           <br>
+            {% if form.phone_no.errors %}
+              {{ form.phone_no(class="invalid" )}}
+                <div class="invalid-feedback">
+                {% for errors in form.phone_no.errors %}
+                <span>{{ errors }}</span>
+                {% endfor %}
+         </div>
+ </font>
+                </td>
+
+                <td>
+
+              {% else %}
+                <div class="true-feedback">
+            {{ form.phone_no(class="valid")}}
+            {% endif %}
+            </div>
+       </td>
+   </tr>
+
+   <tr>
+       <td>
+   <font style="color:#01579b">
+         {{ form.whatsapp.label(class_="form-control-label")}}
+           <br>
+            {% if form.whatsapp.errors %}
+              {{ form.whatsapp(class="invalid" )}}
+                <div class="invalid-feedback">
+                {% for errors in form.whatsapp.errors %}
+
+                <span>{{ errors }}</span>
+                {% endfor %}
+         </div>
+   </font>
+                </td>
+
+                <td>
+
+              {% else %}
+                <div class="true-feedback">
+            {{ form.whatsapp(class="valid")}}
+            {% endif %}
+            </div>
+       </td>
+   </tr>
+
+
+
+<tr>
+   <td>
+     {{form.submit}}
+    </div>
+   </td>
+</tr>
+<tr>
+<td></td><td></td>
+  <td>Already have an account? <a href="http://127.0.0.1:5000/login">Login</a> in here..
+</td>
+ </table>
+</form>
+</div>
+</pre>
+</body>
+</html>

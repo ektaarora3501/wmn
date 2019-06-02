@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    verification
+  </title>
+</head>
+<body>
+  <b> please verify your email  </b>
+<br><br>
+  {% if error %}
+        <div class='error'>
+           <div class="alert alert-danger">
+               <p ><strong>Error:</strong> {{ error }}
+           </div>
+       </div>
+ {% endif %}
+
+ <form action="" method="POST">
+      {{form.hidden_tag()}}
+<table>
+     <br><br>
+        <tr>
+           <td >
+
+           {{ form.otp.label(class_="form-control-label")}}
+              {% if form.otp.errors %}
+                {{ form.otp(class="invalid" )}}
+                    <div class="invalid-feedback">
+                        {% for errors in form.otp.errors %}
+                          <span>{{ errors }}</span>
+                        {% endfor %}
+                    </div>
+              </td>
+            </tr>
+  <td>
+    {% else %}
+          <div class="true-feedback">
+               {{ form.otp(class="valid")}}
+          </div>
+    {% endif %}
+
+    </td>
+</tr>
+
+
+    </table>
+   </form>
+</body>
+</html>

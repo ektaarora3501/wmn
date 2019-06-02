@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    medrem home
+  </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <style>
+  #customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0097a7;
+  color: white;
+}
+
+
+nav ul {
+text-align: right;
+
+width: 100%;
+background-color: #a7ffeb;
+}
+nav ul li {
+display: inline-block;
+margin: 10px;
+margin-bottom: 20px;
+margin-top: 10px;
+font-size:20px;
+}
+nav ul li a {
+color: #008080;
+text-decoration: none;
+}
+nav ul li a:hover {
+color: #9c27b0;
+}
+
+
+.header{
+background-color:#0097a7;
+height:50px;
+text-align: center;
+font-size:40px;
+color:white;
+
+}
+
+
+font{
+  font-size:20px;
+}
+
+.add{
+  margin-left:85%;
+
+  font-size: 15px;
+}
+
+
+  </style>
+</head>
+<body>
+   <meta http-equiv="refresh" content="10">
+   <div class="header">
+     MedRem..
+   </div>
+
+       <div>
+       	<nav>
+           <ul id='navbar'>
+
+             <li><a href="http://127.0.0.1:5000/dashboard/{{username}}">Dashboard</a></li>
+             <li><a href="http://127.0.0.1:5000/update/{{username}}">Update profile</a></li>
+             <li><a href="http://127.0.0.1:5000/logout/{{username}}">Logout</a></li>
+             <li></li>
+           </ul>
+         </nav>
+         </div>
+         <div class="add">
+ <a href="http://127.0.0.1:5000/added/{{username}}">Add New Medicine</a>
+</div>
+
+  <table id="customers">
+ <tr>
+   <th>Medicine</th>
+   <th>Time</th>
+   <th>Expiry Date</th>
+   <th>Delete link</th>
+
+ </tr>
+
+   {% set users = medicines.query.filter_by(user_name=username)  %}
+       {% for user in users %}
+
+       <tr>
+     <td> {{ user.med }}</td>
+       <td>{{ user.time }}</td>
+       <td>{{ user.exp }}</td>
+       <td><a href = "http://127.0.0.1:5000/delete/{{user.med}}" ><b>delete<b></td>
+       </tr>
+
+      {% endfor %}
+
+</tr>
+</table>
+<br><br>
+
+  <br><br>
+
+
+</body>
+</html>
