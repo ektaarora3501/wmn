@@ -1,6 +1,6 @@
 # medrem @WMN;
 
-Medrem is a general time website use to remind users their medicine either by calling or by texting them on whatsapp.. We have also taken initiative to remind user of their expired medicine atleast two months prior. The idea was build together at @WMN; hack.
+Medrem is a general time website use to remind users their medicine either by calling or by texting them on whatsapp. We have also taken initiative to remind user of their expired medicine atleast two months prior by sending them email about expired medicines. 
 
 Some details
 
@@ -18,7 +18,8 @@ After setting up virtualenv and cloning directory Write the command python3 app.
 
 On localhost http://127.0.0.1:5000/ you will see dashboard of medrem
 
-
+Note : In order to access the calling and texting facility by twilio one should have twilio account.
+Replace  auth keys and token in the code with yours.  
 
 This project was created at WMN hackathon banglore.
 
