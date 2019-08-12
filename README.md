@@ -1,4 +1,4 @@
-medrem @WMN;
+# medrem @WMN;
 
 Medrem is a general time website use to remind users their medicine either by calling or by texting them on whatsapp.. We have also taken initiative to remind user of their expired medicine atleast two months prior. The idea was build together at @WMN; hack.
 
