@@ -14,7 +14,8 @@ Flask can be installed using this link https://flask.palletsprojects.com/en/1.1.
 
 Here is a quickstart guide to flask https://flask.palletsprojects.com/en/1.1.x/quickstart/
 
-After setting up virtualenv and cloning directory Write the command python3 app.run
+After setting up virtualenv and cloning directory Write the command python3 code.py
+It will show flask starting up in your terminal window
 
 On localhost http://127.0.0.1:5000/ you will see dashboard of medrem
 
