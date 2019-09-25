@@ -252,7 +252,7 @@ def verify(em):
     db.session.add(u)
     try:
         db.session.commit()
-        msg = Message('Verify', sender = 'pycoders3501@gmail.com', recipients = [em])
+        msg = Message('Verify', sender = '**********', recipients = [em])
         msg.body='hey there.. this email was sent by medrem  ...enter the otp on the  ' + str(m)
         mail.send(msg)
         print("mail sent")
@@ -291,7 +291,7 @@ def dashboard(username):
              if m==value.time:
                  return redirect(url_for('call',username=username))
              if  k==value.exp:
-                     msg = Message('Attention', sender = 'pycoders3501@gmail.com', recipients = [em])
+                     msg = Message('Attention', sender = '****************', recipients = [em])
                      msg.body='hey there.. this email was sent by medrem  to remind you ....\n your medicine'+value.med+'expires on'+value.exp
                      mail.send(msg)
                      print("mail sent")
@@ -315,8 +315,8 @@ def call(username):
                         #status_callback_event=['initiated', 'answered'],
                         #status_callback_method='POST',
                         url='http://demo.twilio.com/docs/voice.xml',
-                        to='+918360581227',
-                        from_='+918360581227'
+                        to='********,
+                        from_='************'
                         #status=request.values.get('CallStatus',None)
                     )
 
