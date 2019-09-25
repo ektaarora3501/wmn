@@ -10,9 +10,9 @@ Programming languauges/APIs used: Python,Flask,Twilio
 
 #Installing Flask on local machine
 
-Flask can be installed using this link https://flask.palletsprojects.com/en/1.1.x/installation/
+Flask can be installed using this [link](https://flask.palletsprojects.com/en/1.1.x/installation/)
 
-Here is a quickstart guide to flask https://flask.palletsprojects.com/en/1.1.x/quickstart/
+Here is a quickstart guide to [flask](https://flask.palletsprojects.com/en/1.1.x/quickstart/)
 
 After setting up virtualenv and cloning directory Write the command python3 code.py
 It will show flask starting up in your terminal window
@@ -24,6 +24,11 @@ Replace  auth keys and token in the code with yours.
 
 This project was created at WMN hackathon banglore.
 
+## Team Codemaniacs
+Contributors:
+Janhvi Talreja
+Ekta Arora
+Sonakshi Priya
 
 
 
